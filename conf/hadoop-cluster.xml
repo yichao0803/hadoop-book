@@ -3,7 +3,7 @@
 
   <property>
     <name>fs.defaultFS</name>
-    <value>hdfs://node121:8020/</value>
+    <value>hdfs://MDSnn01:8020/</value>
   </property>
 
   <property>
@@ -13,7 +13,7 @@
 
   <property>
     <name>yarn.resourcemanager.address</name>
-    <value>node121:8032</value>
+    <value>MDSnn01:8032</value>
   </property>
-  
+
 </configuration>
