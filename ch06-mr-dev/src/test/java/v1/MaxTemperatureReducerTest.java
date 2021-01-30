@@ -20,4 +20,16 @@ public class MaxTemperatureReducerTest {
       .runTest();
   }
   //^^ MaxTemperatureReducerTestV1
+
+  // my test
+  @Test
+  public void returnsMaximumIntegerInValues2() throws IOException {
+    new ReduceDriver<Text ,IntWritable,Text,IntWritable>()
+            .withReducer(new MaxTemperatureReducer())
+            .withInput(new Text("1999")
+                    ,Arrays.asList(new IntWritable(20),new IntWritable(30)))
+            .withOutput(new Text("1999"),new IntWritable(30))
+    .runTest();
+  }
+
 }

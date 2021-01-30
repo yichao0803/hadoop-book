@@ -50,6 +50,35 @@ public class MaxTemperatureMapperTest {
       .withOutput(new Text("1957"), new IntWritable(1957))
       .runTest();
   }
+
+  @Test
+  public void TestStringParseInt()
+  {
+    String str_1="9999";
+    System.out.println(Integer.parseInt(str_1));
+    String str_2="-9999";
+    System.out.println(Integer.parseInt(str_2));
+    String str_3="+9999";
+    System.out.println(Integer.parseInt(str_3));
+
+  }
+  // ^^ MaxTemperatureMapperTestV1
+  @Ignore // since we are showing a failing test in the book
+// vv MaxTemperatureMapperTestV1Missing
+  @Test
+  public void ignoresMissingTemperatureRecord2() throws IOException,
+          InterruptedException {
+    Text value = new Text("0043011990999991950051518004+68750+023550FM-12+0382" +
+            // Year ^^^^
+            "99999V0203201N00261220001CN9999999N9+99991+99999999999");
+    // Temperature ^^^^^
+    new MapDriver<LongWritable, Text, Text, IntWritable>()
+            .withMapper(new MaxTemperatureMapper())
+            .withInput(new LongWritable(0), value)
+            .withOutput(new Text("1950"),new IntWritable(9999))
+            .runTest();
+  }
+
 // vv MaxTemperatureMapperTestV1
 }
 // ^^ MaxTemperatureMapperTestV1
