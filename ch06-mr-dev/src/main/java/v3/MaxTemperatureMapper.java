@@ -27,7 +27,6 @@ public class MaxTemperatureMapper
         parser.parse(value);
         if (parser.isValidTemperature()) {
             int airTemperature = parser.getAirTemperature();
-            System.out.println("input: " + value + ", airTemperature: " + airTemperature);
             /*[*/
             if (airTemperature > 100) {
                 System.err.println("Temperature over 100 degrees for input: " + value);
