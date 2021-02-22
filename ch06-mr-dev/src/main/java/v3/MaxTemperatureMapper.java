@@ -29,7 +29,7 @@ public class MaxTemperatureMapper
             int airTemperature = parser.getAirTemperature();
             System.out.println("input: " + value + ", airTemperature: " + airTemperature);
             /*[*/
-            if (airTemperature > 1000) {
+            if (airTemperature > 100) {
                 System.err.println("Temperature over 100 degrees for input: " + value);
                 context.setStatus("Detected possibly corrupt record: see logs.");
                 context.getCounter(Temperature.OVER_100).increment(1);
