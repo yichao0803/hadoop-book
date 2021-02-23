@@ -16,4 +16,8 @@
     <value>mdsnn01:8032</value>
   </property>
 
+  <property>
+    <name>mapreduce.map.maxattempts</name>
+    <value>2</value>
+  </property>
 </configuration>
