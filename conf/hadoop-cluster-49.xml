@@ -20,4 +20,8 @@
     <name>mapreduce.map.maxattempts</name>
     <value>2</value>
   </property>
+  <property>
+    <name>mapreduce.job.ubertask.enable</name>
+    <value>true</value>
+  </property>
 </configuration>
