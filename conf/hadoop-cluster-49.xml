@@ -15,11 +15,17 @@
     <name>yarn.resourcemanager.address</name>
     <value>mdsnn01:8032</value>
   </property>
-
+  <!-- 客户端可配置-->
   <property>
     <name>mapreduce.map.maxattempts</name>
     <value>2</value>
   </property>
+  <!-- 配置 reduce 数量 -->
+  <property>
+    <name>mapreduce.job.reduces</name>
+    <value>1</value>
+  </property>
+  <!-- 客户端配置，未生效-->
   <property>
     <name>mapreduce.job.ubertask.enable</name>
     <value>true</value>
